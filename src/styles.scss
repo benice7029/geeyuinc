@@ -1,1 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Archivo+Black|PT+Sans+Narrow|Anton');
+
+//先針對media queries的width設為變數
+
+$pc-media:960px;
+$pcs-media:959px;
+$pad-media:760px;
+$pads-media:759px;
+$phone-media:480px;
+$phones-media:479px;
+
+/*把變數帶入mixin中，此mixin只就單純把media queries寫到我的mixin中，
+並且使用我上面設立的變數來調動media queries的width*/
+
+//電腦
+ @mixin pc-width() {
+  @media all and (min-width: $pc-media) {
+               @content;
+         }
+    }
+//平板
+ @mixin pad-width() {
+@media all and (min-width:$pad-media) and (max-width: $pcs-media) {
+                @content;
+          }
+}
+//小平板
+ @mixin small-pad-width() {
+        @media all and (min-width: $phone-media) and (max-width:$pads-media) {
+                @content;
+          }
+ }
+//手機
+ @mixin phone-width() {
+        @media all and (max-width: $phones-media) {
+                @content;
+          }
+ }
+
+
+body, html {
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    &.active{
+        @include phone-width{
+            font-weight: bold;
+        }
+        font-weight: bold;
+        color:#ffa600;
+    }
+}
+
+.body_content{
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 30% auto;
+    @include phone-width{
+        grid-template-columns: 90% auto;
+        
+    }
+   
+}
+.container-fluid{
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em;
+    padding-bottom: 5em;
+}

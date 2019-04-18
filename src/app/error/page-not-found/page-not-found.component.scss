@@ -1,0 +1,10 @@
+@import '../../shared/scss/shared.scss' ;
+
+h2{
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    @include phone-width{
+        left: 15%;
+    }
+}

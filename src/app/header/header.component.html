@@ -1,0 +1,17 @@
+<header [ngClass] = "{'toTop': toTop,'notToTop': !toTop}">
+  <div class="container">
+    <a routerLink="/" class="logo">
+      <img id="logo" src="assets/img/geeyulogo.jpg" alt="">
+    </a>
+    <i (click)="click()" class="fas fa-align-justify"></i>
+    <nav>
+      <ul>
+        <li><a routerLink="/home" routerLinkActive = "active">Home</a></li>
+        <li><a routerLink="/about_us" routerLinkActive = "active">About</a></li>
+        <li><a routerLink="/products" routerLinkActive = "active">Products</a></li>
+        <li><a routerLink="/contact" routerLinkActive = "active">Contact us</a></li>
+      </ul>
+    </nav>
+  </div>
+  <span>GEE YU DEVOLOPING CO.,LTD.</span>
+</header>

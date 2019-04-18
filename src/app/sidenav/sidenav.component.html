@@ -1,0 +1,11 @@
+
+
+<div id="sideNav" [@sidenavbar] = "toggleBoolean" [ngClass]="openAndClose"> <!--[class.open]="isOpen"-->
+  <ul>
+    <li (click)="toggle()" ><a routerLink="/home" routerLinkActive = "active">Home</a></li>
+    <li (click)="toggle()"><a routerLink="/about_us" routerLinkActive = "active">About Us</a></li>
+    <li (click)="toggle()"><a routerLink="/products" routerLinkActive = "active">Products</a></li>
+    <li (click)="toggle()"><a routerLink="/contact" routerLinkActive = "active">Contact us</a></li>
+  </ul>
+
+</div>

@@ -1,0 +1,21 @@
+@import '../../shared/scss/shared.scss' ;
+.intro{
+    
+    padding: 10px 5px;
+    p{
+        font-size: 12px;
+    }
+    img{
+        width: 150px;
+    }
+    div{
+        h4{
+            color: #1e1eea;
+        }
+        p{
+            span{
+                font-weight:bold;
+            }
+        }
+    }
+}

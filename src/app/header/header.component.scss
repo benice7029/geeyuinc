@@ -1,0 +1,81 @@
+@import '../shared/scss/shared.scss' ;
+
+
+header {
+    background: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    font-family: 'PT Sans Narrow';
+    span{
+        font-family: 'Archivo Black', sans-serif;
+        font-style: italic;
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        color: #888888;
+        @include phone-width{
+            font-size: 16px;
+        }
+    }
+    &.toTop{
+        opacity: 1;
+    }
+    &.notToTop{
+        opacity: 0.3;
+        border-bottom: 1px solid rgb(221, 221, 221);
+        @include phone-width{
+            opacity: 1;
+        }
+        &:hover{
+            opacity: 1 !important;
+            
+        }
+    }
+    .container{
+        height: 60px;
+    }
+    .logo {
+        font-weight: bold;
+    }
+
+    #logo {
+        height: 60px;
+    }
+
+    nav {
+        justify-self: right;
+        padding-top: 35px;
+        ul {
+            list-style-type: none;
+            margin: 0; padding: 0;
+
+            li {
+                float: left;
+
+                a {
+                    padding: 1.5em;
+                    text-transform: uppercase;
+                    font-size: .8em;
+                    color: black;
+                    @include phone-width{
+                        display: none;
+                    }
+                    &:hover {
+                        color: #919191;
+                    }
+                }
+            }
+        }
+    }
+
+    i{
+        display: none;
+        @include phone-width{
+            display: inline;
+            font-size: 2em;
+            color: #4d4d4d;
+            padding-top: 20px;
+        }
+    }
+}

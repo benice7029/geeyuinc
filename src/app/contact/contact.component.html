@@ -1,0 +1,47 @@
+<div class="body_content">
+  <div id="title">
+    <h2>
+      Contact Us
+    </h2>
+  </div>
+  <div class="container ">
+    <div class="formArea">
+      <label>Full Name</label><br>
+      <input type="text" [(ngModel)] = "concatMessage.fullName" placeholder="Your Full Name" name="" id=""><br>
+      <label>Email</label><br>
+      <input type="text" [(ngModel)] = "concatMessage.email" placeholder="Your Email" name="" id=""><br>
+      <label>Telephone</label><br>
+      <input type="text" [(ngModel)] = "concatMessage.telephone" class="input-block-level" 
+            required="required" placeholder="Your Telephone" 
+            id="phone" name="phone">
+      
+    </div>
+    <div class="formArea">
+      <label>Message</label><br>
+      <textarea [(ngModel)] = "concatMessage.message" name="message" id="message" required="required" class="input-block-level" rows="8"></textarea>
+    </div>
+    <div class="formArea">
+      <h4>GeeYu Developing Co Ltd</h4>
+      <p>16782 Von Karman Ave., Unit #31, Irvine, CA, 92606</p>
+      <p style="margin:0.5rem 0">
+        <i class="fas fa-envelope-square"></i>
+        info@geeyudeveloping.com
+      </p>
+      <p style="margin:0.5rem 0">
+        <i class="fas fa-phone"></i>
+        Phone: 949-752-5168
+      </p>
+      <p style="margin:0.5rem 0">
+        <i class="fas fa-fax"></i>
+        Fax: 949-752-5668
+      </p>
+      
+    </div>
+    <div></div>
+    <div class="sendBtnArea">
+      <button class="btn" (click) = "sendMessage()">Send Message</button>
+    </div>
+  </div>
+
+</div>
+
